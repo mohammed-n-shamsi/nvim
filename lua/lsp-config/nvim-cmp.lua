@@ -6,7 +6,7 @@ local lspconfig = require('lspconfig')
 local lspkind = require('lspkind')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'rust_analyzer', 'pyright', 'r_language_server' }
+local servers = { 'rust_analyzer', 'pyright', 'clangd', 'texlab'}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
@@ -35,6 +35,15 @@ cmp.setup {
       select = true,
     },
     ['<C-Space>'] = cmp.mapping.complete(),
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
   }),
   sources = {
     { name = 'nvim_lua' },

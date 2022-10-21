@@ -45,6 +45,6 @@ require('lspconfig')['rust_analyzer'].setup{
     }
 }
 
-require'lspconfig'.r_language_server.setup{}
+--require('clangd')['clangd'].setup{}
 
 require'lspconfig'.texlab.setup{}

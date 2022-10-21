@@ -3,13 +3,6 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = ' '
 
--- Mapping for opening nvim tree
-map('n', '<C-p>', ':NvimTreeToggle<CR>', opts)
-
--- Mapping for opening a terminal
-map('n', '<leader>t', '<Cmd>20sp<CR><Cmd>terminal<CR>', opts)
-
--- Barbar mappings
 
 -- Move to previous/next
 map('n', '<leader>,', '<Cmd>BufferPrevious<CR>', opts)
@@ -39,13 +32,17 @@ map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
 --  Telescope mappings
-map('n', '<leader>ff', '<Cmd>Telescope find_files<CR>', opts)
-map('n', '<leader>fg', '<Cmd>Telescope live_grep<CR>', opts)
-map('n', '<leader>fb', '<Cmd>Telescope buffers<CR>', opts)
-map('n', '<leader>fh', '<Cmd>Telescope help_tags<CR>', opts)
+map('n', '<C-p>', '<Cmd>Telescope find_files<CR>', opts)
+map('n', '<S-p>', '<Cmd>Telescope live_grep<CR>', opts)
+map('n', '<C-b>', '<Cmd>Telescope buffers<CR>', opts)
+map('n', '<C-h>', '<Cmd>Telescope help_tags<CR>', opts)
 
 -- Iron mappings
 map('n', '<leader>st', '<Cmd>IronRepl<CR>', opts)
+
+-- SINNING SAVE
+map('n', '<C-s>', ':w<CR>', opts)
+map('i', '<C-s>', '<Esc>:w<CR>a', opts)
 
 -- Trouble mappings
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
@@ -76,6 +73,4 @@ vim.keymap.set("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
-vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>",
-  {silent = true, noremap = true}
-)
+
