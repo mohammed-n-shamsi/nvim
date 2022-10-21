@@ -34,13 +34,13 @@ palettes = {
 local specs = {
     nightfox = {
         syntax = {
-            func = "magenta",
-            preproc = "blue",
+            func = "blue",
+            preproc = "blue.dim",
             number = "cyan",
-            variable = "pink",
-            conditional = "magenta",
+            variable = "white",
+            conditional = "blue",
 
-            bracket = "orange.dim",
+            bracket = "cyan",
             operators = "orange.dim",
 
             builtin2 = "yellow.dim",
@@ -55,8 +55,7 @@ local specs = {
 local options = {
     nightfox = {
         styles = {
-            const = "bold",
-            builtin2 = "bold",
+            constants = "bold",
         },
     },
 },
