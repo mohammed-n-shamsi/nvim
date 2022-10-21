@@ -19,7 +19,7 @@ palettes = {
         bg1     = "#000000", -- Default bg
         bg2     = "#212e3f", -- Lighter bg (colorcolm folds)
         bg3     = "#121717", -- Lighter bg (cursor line)
-        bg4     = "#000000", -- Conceal, border fg
+        bg4     = "#212b2b", -- Conceal, border fg
 
         fg0     = "#d6d6d7", -- Lighter fg
         fg1     = "#e6ebe5", -- Default fg

@@ -6,7 +6,6 @@ return require'packer'.startup(function(use)
   use 'EdenEast/nightfox.nvim' 
 
   -- File tree
-  use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons' -- File icons
 
   -- LSP

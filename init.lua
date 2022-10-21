@@ -6,7 +6,6 @@ require('settings')
 require('mappings')
 
 -- Plugin Settings
-require('nvim-tree-config')
 require('colorschemes-config.nightfox')
 require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')
@@ -19,3 +18,4 @@ require('luasnip-config.utils')
 require('luasnip-config.init')
 require('telescope-config')
 require('iron-config')
+require('nvim_web_devicons-config')
