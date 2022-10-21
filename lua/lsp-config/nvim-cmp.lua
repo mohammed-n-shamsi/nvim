@@ -6,13 +6,32 @@ local lspconfig = require('lspconfig')
 local lspkind = require('lspkind')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'rust_analyzer', 'pyright', 'clangd', 'texlab', 'lua-language-server' }
+local servers = {
+    'rust_analyzer',
+    'pyright',
+    'clangd',
+    'texlab',
+    'sumneko_lua'
+}
+
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         -- on_attach = my_custom_on_attach,
         capabilities = capabilities,
     }
 end
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    -- Only do this on what I have lsps for
+    pattern = {
+        "*.c", "*.h", "*.cpp", "*.hpp",
+        "*.lua",
+        "*.rs",
+        "*.py",
+        "*.tex",
+    },
+    callback = function() vim.lsp.buf.format { async = false } end,
+})
 
 -- luasnip setup
 local luasnip = require 'luasnip'
@@ -93,9 +112,4 @@ luasnip.config.set_config({
             },
         },
     },
-})
-
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-    callback = function() vim.lsp.buf.format { async = true } end,
 })
