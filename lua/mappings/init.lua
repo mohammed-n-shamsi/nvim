@@ -66,6 +66,12 @@ vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
     { silent = true, noremap = true }
 )
+vim.keymap.set("n", "gd", "<cmd>TroubleToggle lsp_definitions<cr>",
+    { silent = true, noremap = true }
+)
+vim.keymap.set("n", "gy", "<cmd>TroubleToggle lsp_type_definitions<cr>",
+    { silent = true, noremap = true }
+)
 
 -- Todo Comments Mappings
 vim.keymap.set("n", "]t", function()

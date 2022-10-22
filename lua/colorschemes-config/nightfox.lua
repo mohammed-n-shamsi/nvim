@@ -15,19 +15,19 @@ palettes = {
 
         comment = "#9898ae",
 
-        bg0     = "#121717", -- Dark bg (status line and float)
-        bg1     = "#000000", -- Default bg
-        bg2     = "#212e3f", -- Lighter bg (colorcolm folds)
-        bg3     = "#121717", -- Lighter bg (cursor line)
-        bg4     = "#212b2b", -- Conceal, border fg
+        bg0 = "#121717", -- Dark bg (status line and float)
+        bg1 = "#000000", -- Default bg
+        bg2 = "#212e3f", -- Lighter bg (colorcolm folds)
+        bg3 = "#121717", -- Lighter bg (cursor line)
+        bg4 = "#212b2b", -- Conceal, border fg
 
-        fg0     = "#d6d6d7", -- Lighter fg
-        fg1     = "#e6ebe5", -- Default fg
-        fg2     = "#adccd2", -- Darker fg (status line)
-        fg3     = "#212b2b", -- Darker fg (line numbers, fold colums)
+        fg0 = "#d6d6d7", -- Lighter fg
+        fg1 = "#e6ebe5", -- Default fg
+        fg2 = "#adccd2", -- Darker fg (status line)
+        fg3 = "#212b2b", -- Darker fg (line numbers, fold colums)
 
-        sel0    = "#2d3939", -- Popup bg, visual selection bg
-        sel1    = "#2d3939", -- Popup sel bg, search bg   
+        sel0 = "#121717", -- Popup bg, visual selection bg
+        sel1 = "#2d3939", -- Popup sel bg, search bg
     },
 }
 
@@ -60,5 +60,5 @@ local options = {
     },
 },
 
-require("nightfox").setup({palettes = palettes, specs = specs, options = options})
+    require("nightfox").setup({ palettes = palettes, specs = specs, options = options })
 vim.cmd('colorscheme nightfox')
