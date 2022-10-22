@@ -35,3 +35,5 @@ vim.g.tex_flavor = "latex"
 
 -- Disable the vile mouse
 set.mouse = nil
+
+set.clipboard = "unnamed,unnamedplus"

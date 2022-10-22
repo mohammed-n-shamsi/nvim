@@ -9,9 +9,11 @@ local lspkind = require('lspkind')
 local servers = {
     'rust_analyzer',
     'pyright',
-    'clangd',
+    'ccls',
     'texlab',
-    'sumneko_lua'
+    'sumneko_lua',
+    'dockerls',
+    'grammarly'
 }
 
 for _, lsp in ipairs(servers) do
@@ -29,6 +31,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         "*.rs",
         "*.py",
         "*.tex",
+        "dockerfile",
+        "*.md"
     },
     callback = function() vim.lsp.buf.format { async = false } end,
 })
