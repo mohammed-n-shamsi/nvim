@@ -64,6 +64,11 @@ lspconfig.ccls.setup {
     }
 }
 
+require 'lspconfig'.ccls.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+
 require 'lspconfig'.dockerls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
