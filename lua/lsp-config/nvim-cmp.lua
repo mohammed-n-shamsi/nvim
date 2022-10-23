@@ -84,11 +84,6 @@ local types = require 'luasnip.util.types'
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
-    snippet = {
-        expand = function(args)
-            luasnip.lsp_expand(args.body)
-        end,
-    },
     mapping = cmp.mapping.preset.insert({
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -123,6 +118,7 @@ cmp.setup {
     },
 
     cmp.setup {
+        preselect = cmp.PreselectMode.None,
         formatting = {
             format = lspkind.cmp_format({
                 mode = 'symbol_text', -- show only symbol annotations
