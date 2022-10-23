@@ -42,15 +42,6 @@ require('lspconfig')['pyright'].setup {
     flags = lsp_flags,
 }
 
-require('lspconfig')['rust_analyzer'].setup {
-    on_attach = on_attach,
-    flags = lsp_flags,
-    -- Server-specific settings...
-    settings = {
-        ["rust-analyzer"] = {}
-    }
-}
-
 local lspconfig = require 'lspconfig'
 lspconfig.ccls.setup {
     init_options = {
@@ -102,4 +93,40 @@ require 'lspconfig'.sumneko_lua.setup {
             },
         },
     },
+}
+
+require('lspconfig')['rust_analyzer'].setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    -- Server-specific settings...
+    settings = {
+        ["rust-analyzer"] = {
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
+            },
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+            },
+            procMacro = {
+                enable = true
+            },
+        }
+    }
+}
+
+
+require('lspconfig').als.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    settings = {
+        ada = {
+            projectFile = "project.gpr";
+            scenarioVariables = { ... };
+        }
+    }
 }

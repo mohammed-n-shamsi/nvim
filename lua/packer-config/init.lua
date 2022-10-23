@@ -9,6 +9,8 @@ return require 'packer'.startup(function(use)
     use 'kyazdani42/nvim-web-devicons' -- File icons
 
     -- LSP
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
     use 'hrsh7th/cmp-buffer' -- For looking at current file completions
@@ -27,6 +29,7 @@ return require 'packer'.startup(function(use)
             })
         end,
     })
+    use 'simrat39/rust-tools.nvim'
 
     -- Notifications
     use 'rcarriga/nvim-notify'
@@ -55,6 +58,7 @@ return require 'packer'.startup(function(use)
         'nvim-telescope/telescope.nvim', branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
 
     -- REPL
     use { 'hkupty/iron.nvim' }
@@ -99,5 +103,8 @@ return require 'packer'.startup(function(use)
 
     -- gitsigns
     use { 'lewis6991/gitsigns.nvim' }
+
+    use 'nvim-lua/plenary.nvim'
+    use 'mfussenegger/nvim-dap'
 
 end)

@@ -83,6 +83,10 @@ vim.keymap.set("n", "go", "<cmd>LSoutlineToggle<CR>",
     { silent = true, noremap = true }
 )
 
+vim.keymap.set("n", "gk", "<cmd>RustHoverActions<CR>",
+    { silent = true, noremap = true }
+)
+
 
 -- Todo Comments Mappings
 vim.keymap.set("n", "]t", function()

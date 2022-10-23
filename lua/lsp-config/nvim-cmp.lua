@@ -41,14 +41,16 @@ local lspconfig = require('lspconfig')
 local lspkind = require('lspkind')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+-- No rust here rust-tools takes care of it
 local servers = {
-    'rust_analyzer',
+    -- 'rust_analyzer',
     'pyright',
     'ccls',
     'texlab',
     'sumneko_lua',
     'dockerls',
-    'grammarly'
+    'grammarly',
+    'als'
 }
 
 for _, lsp in ipairs(servers) do
@@ -68,10 +70,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         "*.py",
         "*.tex",
         "dockerfile",
-        "*.md"
+        "*.md",
+        "*.ada", "*.adb", "*.ads", "*.gpr",
     },
     callback = function() vim.lsp.buf.format { async = false } end,
 })
+
 
 -- luasnip setup
 local luasnip = require 'luasnip'

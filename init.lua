@@ -7,6 +7,7 @@ require('mappings')
 
 -- Plugin Settings
 require('colorschemes-config.nightfox')
+require('mason-config')
 require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')
 require('lualine-config')
@@ -20,3 +21,4 @@ require('telescope-config')
 require('iron-config')
 require('nvim_web_devicons-config')
 require('gitsigns-config')
+require('rust_tools-config')
