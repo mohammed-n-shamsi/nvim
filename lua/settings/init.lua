@@ -37,3 +37,10 @@ vim.g.tex_flavor = "latex"
 set.mouse = nil
 
 set.clipboard = "unnamed,unnamedplus"
+
+
+vim.api.nvim_create_autocmd("BufEnter", {
+    callback = function()
+        vim.opt.formatoptions = vim.opt.formatoptions - { "c", "r", "o" }
+    end,
+})

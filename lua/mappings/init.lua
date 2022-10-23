@@ -48,6 +48,7 @@ map('i', '<C-s>', '<Esc>:w<CR>a', opts)
 -- map('n', 'gh', '<Cmd>ClangdSwitchSourceHeader<CR>', opts)
 
 -- Trouble mappings
+-- NOTE: "You can press "K" (shift-k) to see a popup with the full text"
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
     { silent = true, noremap = true }
 )

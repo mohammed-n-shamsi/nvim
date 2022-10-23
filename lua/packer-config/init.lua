@@ -111,4 +111,9 @@ return require 'packer'.startup(function(use)
     -- indexing progress bar
     use 'j-hui/fidget.nvim'
 
+    -- auto close
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
