@@ -104,7 +104,11 @@ return require 'packer'.startup(function(use)
     -- gitsigns
     use { 'lewis6991/gitsigns.nvim' }
 
+    -- for debugging
     use 'nvim-lua/plenary.nvim'
     use 'mfussenegger/nvim-dap'
+
+    -- indexing progress bar
+    use 'j-hui/fidget.nvim'
 
 end)
