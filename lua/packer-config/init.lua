@@ -24,9 +24,7 @@ return require 'packer'.startup(function(use)
         branch = "main",
         config = function()
             local saga = require("lspsaga")
-            saga.init_lsp_saga({
-                --setup
-            })
+            saga.init_lsp_saga({})
         end,
     })
     use 'simrat39/rust-tools.nvim'

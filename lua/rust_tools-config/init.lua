@@ -200,9 +200,7 @@ local opts = {
         capabilities = capabilities,
         settings = {
             ["rust-analyzer"] = {
-                checkOnSave = {
-                    allTargets = false
-                }
+                -- Here lie rust-analyzer configs
             }
         }
     }, -- rust-analyzer options

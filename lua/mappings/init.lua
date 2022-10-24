@@ -42,7 +42,7 @@ map('n', '<leader>st', '<Cmd>IronRepl<CR>', opts)
 
 -- SINNING SAVE
 map('n', '<C-s>', ':w<CR>', opts)
-map('i', '<C-s>', '<Esc>:w<CR>a', opts)
+map('i', '<C-s>', '<Esc>:w<CR>', opts)
 
 -- Clang swap source header
 -- map('n', 'gh', '<Cmd>ClangdSwitchSourceHeader<CR>', opts)
@@ -64,9 +64,9 @@ vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
     { silent = true, noremap = true }
 )
-vim.keymap.set("n", "gr", "<cmd>TroubleToggle lsp_references<cr>",
-    { silent = true, noremap = true }
-)
+-- vim.keymap.set("n", "gr", "<cmd>TroubleToggle lsp_references<cr>",
+--     { silent = true, noremap = true }
+-- )
 vim.keymap.set("n", "gd", "<cmd>TroubleToggle lsp_definitions<cr>",
     { silent = true, noremap = true }
 )
@@ -81,6 +81,10 @@ vim.keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>",
 )
 
 vim.keymap.set("n", "go", "<cmd>LSoutlineToggle<CR>",
+    { silent = true, noremap = true }
+)
+
+vim.keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>",
     { silent = true, noremap = true }
 )
 
