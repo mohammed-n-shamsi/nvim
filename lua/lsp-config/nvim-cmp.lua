@@ -64,7 +64,7 @@ end
 vim.api.nvim_create_autocmd("BufWritePre", {
     -- Only do this on what I have lsps for
     pattern = {
-        "*.c", "*.h", "*.cpp", "*.hpp",
+        "*.c", "*.h", "*.cpp", "*.hpp", "*.C", "*.CPP", "*.c++", "*.cc", "*.cp", "*.cxx",
         "*.lua",
         "*.rs",
         "*.py",
