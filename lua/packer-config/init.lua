@@ -24,7 +24,11 @@ return require 'packer'.startup(function(use)
         branch = "main",
         config = function()
             local saga = require("lspsaga")
-            saga.init_lsp_saga({})
+            saga.init_lsp_saga({
+                code_action_lightbulb = {
+                    enable = false
+                }
+            })
         end,
     })
     use 'simrat39/rust-tools.nvim'
@@ -114,4 +118,7 @@ return require 'packer'.startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    -- md show
+    use { "ellisonleao/glow.nvim" }
 end)

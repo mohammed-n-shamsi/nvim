@@ -16,7 +16,7 @@ set.autoindent = true
 
 set.splitbelow = false
 set.splitright = false
-set.wrap = false
+set.wrap = true
 set.scrolloff = 5
 set.fileencoding = 'utf-8'
 set.termguicolors = true
