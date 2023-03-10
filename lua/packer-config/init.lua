@@ -12,19 +12,19 @@ return require 'packer'.startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-    use 'hrsh7th/cmp-buffer' -- For looking at current file completions
-    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-    use 'hrsh7th/cmp-path' -- For looking for file paths
+    use 'hrsh7th/nvim-cmp'         -- Autocompletion plugin
+    use 'hrsh7th/cmp-buffer'       -- For looking at current file completions
+    use 'hrsh7th/cmp-nvim-lsp'     -- LSP source for nvim-cmp
+    use 'hrsh7th/cmp-path'         -- For looking for file paths
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    use 'L3MON4D3/LuaSnip' -- Snippets plugin
-    use 'onsails/lspkind-nvim' -- Adding icons to the completions
+    use 'L3MON4D3/LuaSnip'         -- Snippets plugin
+    use 'onsails/lspkind-nvim'     -- Adding icons to the completions
     use({
         "glepnir/lspsaga.nvim",
         branch = "main",
         config = function()
             local saga = require("lspsaga")
-            saga.init_lsp_saga({
+            saga.setup({
                 code_action_lightbulb = {
                     enable = false
                 }

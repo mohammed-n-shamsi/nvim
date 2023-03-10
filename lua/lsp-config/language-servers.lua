@@ -45,13 +45,13 @@ require('lspconfig')['pyright'].setup {
 local lspconfig = require 'lspconfig'
 lspconfig.ccls.setup {
     init_options = {
-        compilationDatabaseDirectory = "build";
+        compilationDatabaseDirectory = "build",
         index = {
-            threads = 0;
-        };
+            threads = 0,
+        },
         clang = {
-            excludeArgs = { "-frounding-math" };
-        };
+            excludeArgs = { "-frounding-math" },
+        },
     }
 }
 
@@ -70,7 +70,7 @@ require 'lspconfig'.texlab.setup {
     flags = lsp_flags,
 }
 
-require 'lspconfig'.sumneko_lua.setup {
+require 'lspconfig'.lua_ls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     settings = {
@@ -125,8 +125,8 @@ require('lspconfig').als.setup {
     flags = lsp_flags,
     settings = {
         ada = {
-            projectFile = "project.gpr";
-            scenarioVariables = { ... };
+            projectFile = "project.gpr",
+            scenarioVariables = { ... },
         }
     }
 }

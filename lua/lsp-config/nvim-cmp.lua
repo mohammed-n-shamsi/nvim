@@ -47,7 +47,7 @@ local servers = {
     'pyright',
     'ccls',
     'texlab',
-    'sumneko_lua',
+    'lua_ls',
     'dockerls',
     'grammarly',
     'als'
