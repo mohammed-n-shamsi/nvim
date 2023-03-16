@@ -52,7 +52,7 @@ return require 'packer'.startup(function(use)
     use 'numToStr/Comment.nvim'
 
     -- Neovim surround
-    use "kylechui/nvim-surround"
+    -- use "kylechui/nvim-surround"
 
     -- Fuzzy finder
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
