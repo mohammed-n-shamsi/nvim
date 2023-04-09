@@ -23,7 +23,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<S-f>', function() vim.lsp.buf.format { async = true } end, bufopts)
     -- Should use leader?
     -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-    -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', 'gv', vim.lsp.buf.code_action, bufopts)
     -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
     -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
     -- vim.keymap.set('n', '<space>wl', function()

@@ -115,7 +115,6 @@ return require 'packer'.startup(function(use)
 
     -- for debugging
     use 'nvim-lua/plenary.nvim'
-    use 'mfussenegger/nvim-dap'
 
     -- indexing progress bar
     use 'j-hui/fidget.nvim'
@@ -166,4 +165,7 @@ return require 'packer'.startup(function(use)
         "ggandor/leap.nvim",
         config = function() require('leap').add_default_mappings() end
     }
+
+    --dap
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 end)

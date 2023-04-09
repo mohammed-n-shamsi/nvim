@@ -1,4 +1,4 @@
-vim.g.bufferline = {
+require 'barbar'.setup {
     -- Enable/disable animations
     animation = true,
 
@@ -9,7 +9,7 @@ vim.g.bufferline = {
     tabpages = false,
 
     -- Enable/disable close button
-    closable = false,
+    -- closable = false,
 
     -- Enables/disable clickable tabs
     --  - left-click: go to buffer
@@ -27,7 +27,13 @@ vim.g.bufferline = {
     -- Enable/disable icons
     -- if set to 'numbers', will show buffer index in the tabline
     -- if set to 'both', will show buffer index and icons in the tabline
-    icons = true,
+    icons = {
+        filetype = { enabled = true },
+        separator = { left = '▎', right = ' ' },
+        pinned = { button = '車' },
+        -- close_tab = '',
+        modified = { button = '●' },
+    },
 
     -- If set, the icon color will follow its corresponding buffer
     -- highlight group. By default, the Buffer*Icon group is linked to the
@@ -36,11 +42,11 @@ vim.g.bufferline = {
     icon_custom_colors = false,
 
     -- Configure icons on the bufferline.
-    icon_separator_active = '▎',
-    icon_separator_inactive = '▎',
-    icon_close_tab = '',
-    icon_close_tab_modified = '●',
-    icon_pinned = '車',
+    -- icon_separator_active = '▎',
+    -- icon_separator_inactive = '▎',
+    -- icon_close_tab = '',
+    -- icon_close_tab_modified = '●',
+    -- icon_pinned = '車',
 
     -- If true, new buffers will be inserted at the start/end of the list.
     -- Default is to insert after current buffer.
