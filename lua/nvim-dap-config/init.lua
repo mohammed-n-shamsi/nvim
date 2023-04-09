@@ -23,7 +23,7 @@ dap.adapters.lldb = {
     type = "server",
     port = "${port}",
     executable = {
-        command = "/home/dom/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb",
+        command = "/home/mo/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb",
         args = { "--port", "${port}" },
         -- On windows you may have to uncomment this:
         -- detached = false,
