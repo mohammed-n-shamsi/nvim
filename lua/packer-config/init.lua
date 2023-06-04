@@ -26,10 +26,15 @@ return require 'packer'.startup(function(use)
             local saga = require("lspsaga")
             saga.setup({
                 code_action_lightbulb = {
-                    enable = false
+                    enable = true
                 }
             })
         end,
+        requires = {
+            { "nvim-tree/nvim-web-devicons" },
+            --Please make sure you install markdown and markdown_inline parser
+            { "nvim-treesitter/nvim-treesitter" }
+        }
     })
     use 'simrat39/rust-tools.nvim'
     use({
@@ -44,7 +49,10 @@ return require 'packer'.startup(function(use)
     use 'rcarriga/nvim-notify'
 
     -- Line
-    use 'nvim-lualine/lualine.nvim'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     -- Nice tabs
     use 'romgrk/barbar.nvim'
