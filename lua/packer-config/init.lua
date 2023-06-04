@@ -25,9 +25,9 @@ return require 'packer'.startup(function(use)
         config = function()
             local saga = require("lspsaga")
             saga.setup({
-                code_action_lightbulb = {
-                    enable = true
-                }
+                ui = {
+                    code_action = "⧱",
+                },
             })
         end,
         requires = {
