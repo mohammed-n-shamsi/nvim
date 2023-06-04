@@ -11,4 +11,5 @@ require 'nvim-web-devicons'.setup {
     default = true,
 }
 
-require("nvim-web-devicons").set_default_icon('', '#284547')
+-- require("nvim-web-devicons").set_default_icon('', '#284547')
+require("nvim-web-devicons").set_default_icon('', '#5ca5aa')

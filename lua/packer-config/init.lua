@@ -70,7 +70,7 @@ return require 'packer'.startup(function(use)
     use { 'nvim-telescope/telescope-ui-select.nvim' }
 
     -- REPL
-    use { 'hkupty/iron.nvim' }
+    -- use { 'hkupty/iron.nvim' }
 
     -- Trouble
     use {
@@ -99,7 +99,7 @@ return require 'packer'.startup(function(use)
     }
 
     -- Filetypes.vim replacement
-    use("nathom/filetype.nvim")
+    -- use("nathom/filetype.nvim")
 
     -- Color show
     use {
