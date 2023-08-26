@@ -80,7 +80,7 @@ vim.keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>",
     { silent = true, noremap = true }
 )
 
-vim.keymap.set("n", "go", "<cmd>LSoutlineToggle<CR>",
+vim.keymap.set("n", "go", "<cmd>Lspsaga outline<CR>",
     { silent = true, noremap = true }
 )
 

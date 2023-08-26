@@ -28,6 +28,15 @@ return require 'packer'.startup(function(use)
                 ui = {
                     code_action = "⧱",
                 },
+                outline = {
+                    win_position = 'left',
+                    keys = {
+                        toggle_or_jump = '<CR>'
+                    }
+                },
+                lightbulb = {
+                    sign = false,
+                }
             })
         end,
         requires = {
@@ -125,8 +134,15 @@ return require 'packer'.startup(function(use)
     use 'nvim-lua/plenary.nvim'
 
     -- indexing progress bar
-    use 'j-hui/fidget.nvim'
-
+    use {
+        'j-hui/fidget.nvim',
+        tag = 'legacy',
+        config = function()
+            require("fidget").setup {
+                -- options
+            }
+        end,
+    }
     -- auto close
     use {
         "windwp/nvim-autopairs",
@@ -176,4 +192,10 @@ return require 'packer'.startup(function(use)
 
     --dap
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+
+
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 end)
