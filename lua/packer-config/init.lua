@@ -5,6 +5,9 @@ return require 'packer'.startup(function(use)
     -- Colorscheme
     use 'EdenEast/nightfox.nvim'
 
+    -- use 'Yazeed1s/minimal.nvim'
+    -- vim.cmd [[colorscheme minimal]] -- for minimal
+
     -- File tree
     use 'kyazdani42/nvim-web-devicons' -- File icons
 

@@ -50,7 +50,8 @@ local servers = {
     'lua_ls',
     'dockerls',
     'als',
-    'ltex'
+    'ltex',
+    'tsserver',
 }
 
 for _, lsp in ipairs(servers) do
@@ -72,6 +73,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         "dockerfile",
         "*.md",
         "*.ada", "*.adb", "*.ads", "*.gpr",
+        "*.ts",
     },
     callback = function() vim.lsp.buf.format { async = false } end,
 })
