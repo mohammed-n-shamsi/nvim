@@ -6,7 +6,7 @@ require('settings')
 require('mappings')
 
 -- Plugin Settings
-require('colorschemes-config.nightfox')
+-- require('colorschemes-config.nightfox')
 require('mason-config')
 require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')

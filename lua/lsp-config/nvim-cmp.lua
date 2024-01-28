@@ -42,14 +42,15 @@ local lspkind = require('lspkind')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 -- No rust here rust-tools takes care of it
+-- These are default config setups - the individual configs for personalized options happens in language-servers.lsp
 local servers = {
     -- 'rust_analyzer',
-    'pyright',
+    -- 'pylsp',
     'ccls',
     'texlab',
     'lua_ls',
     'dockerls',
-    'als',
+    -- 'als',
     'ltex',
     'tsserver',
 }

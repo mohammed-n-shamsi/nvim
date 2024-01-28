@@ -37,11 +37,6 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
-require('lspconfig')['pyright'].setup {
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
-
 local lspconfig = require 'lspconfig'
 lspconfig.ccls.setup {
     init_options = {
@@ -54,6 +49,7 @@ lspconfig.ccls.setup {
         },
     }
 }
+
 
 require 'lspconfig'.ccls.setup {
     on_attach = on_attach,
@@ -127,6 +123,20 @@ require('lspconfig').als.setup {
         ada = {
             projectFile = "project.gpr",
             scenarioVariables = { ... },
+        }
+    }
+}
+require('lspconfig').pylsp.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    ignore = { 'W391' },
+                    maxLineLength = 120
+                }
+            }
         }
     }
 }

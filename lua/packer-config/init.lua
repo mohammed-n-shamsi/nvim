@@ -3,10 +3,14 @@ return require 'packer'.startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorscheme
-    use 'EdenEast/nightfox.nvim'
+    -- use 'EdenEast/nightfox.nvim'
 
     -- use 'Yazeed1s/minimal.nvim'
     -- vim.cmd [[colorscheme minimal]] -- for minimal
+
+    use "savq/melange-nvim"
+    vim.opt.termguicolors = true
+    vim.cmd.colorscheme 'melange'
 
     -- File tree
     use 'kyazdani42/nvim-web-devicons' -- File icons
